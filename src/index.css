@@ -1,0 +1,73 @@
+/* CSS for Demo Page */
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	min-inline-size: 0;
+}
+
+:root {
+	--color-main: #332;
+	--color-base: #eeeee6;
+	--color-accent: #f3ff39;
+
+	--sp-l: 64px;
+	--sp-m: 32px;
+	--sp-s: 16px;
+	@media (max-width: 959px) {
+		--sp-l: 56px;
+		--sp-m: 24px;
+		--sp-s: 12px;
+	}
+	@media (max-width: 479px) {
+		--sp-l: 48px;
+		--sp-m: 16px;
+		--sp-s: 8px;
+	}
+
+	scroll-behavior: smooth;
+	text-size-adjust: none;
+	accent-color: var(--color-accent);
+	color: var(--color-main);
+	background-color: var(--color-base);
+
+	font-family: Fredoka, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	text-align: center;
+}
+
+header h1 {
+	display: flex;
+	align-items: center;
+	gap: var(--sp-s);
+	margin-block-start: var(--sp-l);
+	font-size: 2.5rem;
+	letter-spacing: .1em;
+	img {
+		width: 1.4em;
+		aspect-ratio: 1;
+	}
+}
+
+header > a {
+	display: inline-block;
+	color: var(--color-main);
+	font-weight: bold;
+	margin: var(--sp-s) auto 0;
+	text-decoration: none;
+	padding: .4em .8em;
+}
+
+smooz-div {
+	margin-top: 8px;
+}

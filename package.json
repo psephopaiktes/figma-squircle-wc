@@ -1,0 +1,41 @@
+{
+	"name": "figma-squircle-wc",
+	"version": "0.0.0",
+	"description": "TODO",
+	"type": "module",
+	"main": "dist-npm/figma-squircle-wc.ts",
+	"module": "dist-npm/figma-squircle-wc.ts",
+	"keywords": [
+		"lit",
+		"vite",
+		"squircle",
+		"superellipse",
+		"squircle",
+		"smooth-corner",
+		"web-components",
+		"figma"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/psephopaiktes/figma-squircle-wc.git"
+	},
+	"license": "MIT",
+	"scripts": {
+		"start": "vite --open",
+		"dev": "vite",
+		"biome": "biome check --write ./src",
+		"build-docs": "vite build -c vite.config.docs.mjs",
+		"build-npm": "vite build -c vite.config.npm.mjs",
+		"build-cdn": "vite build -c vite.config.cdn.mjs",
+		"build": "biome && npm run build-npm && npm run build-cdn && npm run build-docs"
+	},
+	"dependencies": {
+		"figma-squircle": "^1.1.0",
+		"lit": "^3.2.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"typescript": "~5.6.2",
+		"vite": "^6.0.5"
+	}
+}
